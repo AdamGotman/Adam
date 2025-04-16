@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.3.0/css/pro.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>admDMV</title>
+</head>
+<body>
+    <div class="background-container">
+        <div class="bg-image car"></div>
+        <div class="bg-image road-sign"></div>
+        <div class="bg-image driving-school"></div>
+        <div class="bg-image traffic-lights"></div>
+    </div>
+
+    <!-- Main Exam Container -->
+    <div class="container">
+        <div class="top-container">
+            <div class="box-time">30:00</div>
+            <div class="id-question">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+                <div class="box">10</div>
+                <div class="box">11</div>
+                <div class="box">12</div>
+                <div class="box">13</div>
+                <div class="box">14</div>
+                <div class="box">15</div>
+            </div>
+        </div>
+        <div class="mid-container">
+            <div class="left-mid">
+                <div class="question-text"><p class="big-text"></p></div>
+                <div class="question-img">
+                    <img src="" class="imgTest">
+                </div>
+            </div>
+            <div class="right-mid">
+                <div class="answer"></div>
+                <div class="answer"></div>
+                <div class="answer"></div>
+                <div class="answer"></div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <button class="next-button" onclick="nextQuestionButton();">Urmatoarea Intrebare</button>
+        </div>
+    </div>
+
+    <!-- Initial Choice Container -->
+    <div class="container-choise">
+        <div class="close-btn" onclick="closeAll()">×</div>
+        <div class="choice-box" onclick="showTheory()">
+            <i class="fas fa-book-open"></i>
+            <span>Citește teorema</span>
+            <p class="info-text">Pentru a susține examenul, este recomandat să citești teorema.</p>
+        </div>
+        <div class="choice-box" onclick="startExam()">
+            <i class="fas fa-car"></i>
+            <span>Sustine Examenul</span>
+            <p class="info-text">Pentru a susține examenul trebuie să plătești 1000€.</p>
+        </div>
+        
+    </div>
+    
+
+    <!-- Theory Container -->
+    <div class="theory-container">
+        <div class="close-btn" onclick="closeTheory()">×</div>
+        
+        <div class="theory-header">
+            <div class="theory-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1 class="theory-title">Teorie Școlară Auto</h1>
+        </div>
+        
+        <div class="theory-content">
+            <div class="theory-text">
+        
+                <!-- Indicator: Cedează Trecerea -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-hand-paper"></i> Cedează Trecerea</h2>
+                    <p class="section-content">
+                        Indicatorul „Cedează Trecerea” obligă șoferul să reducă viteza și să acorde prioritate tuturor vehiculelor care circulă pe drumul cu prioritate.
+                    </p>
+                </div>
+        
+                <!-- Semafor și culori -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-traffic-light"></i> Semafor Rutier</h2>
+                    <p class="section-content">
+                        Culoarea galbenă a semaforului indică faptul că trebuie să te oprești, dacă acest lucru se poate face în siguranță. Nu accelera la galben!
+                    </p>
+                </div>
+        
+                <!-- Limite de Viteză -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-gauge-high"></i> Limite de Viteză</h2>
+                    <p class="section-content">
+                        Viteza maximă în oraș este de 50 km/h. Pe drumurile naționale în afara localităților – 90 km/h, iar pe autostrăzi – 130 km/h. Limita de 160 km/h nu este legală.
+                    </p>
+                </div>
+        
+                <!-- Prioritate și Intersecții -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Prioritate în Intersecții</h2>
+                    <p class="section-content">
+                        La intersecții fără semafor sau semne, regula priorității de dreapta se aplică. Dacă există semne sau semafor, acestea au prioritate.
+                    </p>
+                </div>
+        
+                <!-- Pietoni -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-walking"></i> Trecere Pietoni</h2>
+                    <p class="section-content">
+                        La apropierea de o trecere de pietoni, redu viteza și fii pregătit să oprești. Nu ai voie să accelerezi sau să claxonezi pentru a-i speria.
+                    </p>
+                </div>
+        
+                <!-- Alcool la volan -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-wine-bottle"></i> Alcool la Volan</h2>
+                    <p class="section-content">
+                        Limita legală pentru șoferii amatori este 0.0‰ alcool în sânge. Conducerea sub influență este interzisă și sever pedepsită.
+                    </p>
+                </div>
+        
+                <!-- Depășirea -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-car-side"></i> Depășirea</h2>
+                    <p class="section-content">
+                        Depășirea se face pe stânga, însă pe drumuri cu 3 benzi pe sens, este permisă și depășirea prin dreapta dacă vehiculul din față semnalizează și se încadrează pe stânga.
+                    </p>
+                </div>
+        
+                <!-- Ambulanță -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-ambulance"></i> Vehicule cu Prioritate</h2>
+                    <p class="section-content">
+                        La vederea unei ambulanțe cu semnale sonore și luminoase, șoferii trebuie să faciliteze trecerea acesteia imediat, oprind sau eliberând banda.
+                    </p>
+                </div>
+        
+                <!-- Semafor defect -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-tools"></i> Semafor Defect</h2>
+                    <p class="section-content">
+                        În lipsa unui semafor funcțional, se aplică regulile semnelor rutiere. Dacă acestea lipsesc, se aplică regula priorității de dreapta.
+                    </p>
+                </div>
+        
+                <!-- Triunghi reflectorizant -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> Avarii și Semnalizare</h2>
+                    <p class="section-content">
+                        În caz de avarie, plasează triunghiul reflectorizant la cel puțin 30 m în spatele vehiculului pentru a avertiza ceilalți participanți la trafic.
+                    </p>
+                </div>
+        
+                <!-- Indicator Acces Interzis -->
+                <div class="theory-section">
+                    <h2 class="section-title"><i class="fas fa-ban"></i> Indicator Acces Interzis</h2>
+                    <p class="section-content">
+                        Semnul de „Acces Interzis” indică faptul că niciun vehicul nu are voie să intre pe acel drum.
+                    </p>
+                </div>
+        
+            </div>
+        </div>
+        
+            
+ 
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
