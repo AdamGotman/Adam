@@ -167,6 +167,7 @@ const nextQuestionBtn = document.querySelector('.next-button');
 const cotainerDMV = document.querySelector('.container');
 const timerHTML = document.querySelector('.box-time');
 const questionBoxes = document.querySelectorAll('.box');
+let timerInterval;
 
 let currentIndex = 0;
 let correctAnswers = 0;
@@ -234,11 +235,10 @@ function updateTime(){
         timer--;
     }
 }
-updateTime();
-const timerInterval = setInterval(updateTime, 1000);
-
+ 
 function startExam(){
-    
+    updateTime();
+    timerInterval = setInterval(updateTime, 1000);
     document.querySelector('.container').style.display = 'flex';
     document.querySelector('.container-choise').style.display = 'none';
     StartTest();
